@@ -10,7 +10,7 @@ public class Main{
 			return 0;
 		if(dp[i][x]!=0)
 			return dp[i][x];
-		return dp[i][x]=arr[i]*solve(arr,i-1,x-1)+(1-arr[i])*solve(arr,i-1,x);
+		return dp[i][x]=arr[i-1]*solve(arr,i-1,x-1)+(1-arr[i-1])*solve(arr,i-1,x);
 
 	}
 	public static void main(String[] args)throws IOException {
